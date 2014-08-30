@@ -28,19 +28,8 @@
   :cljsbuild
   {:builds [{:id "dev"
              :source-paths ["src" "dev"]
-             :compiler {
-                        ;; :output-to "dev/om-grid.js"
-                        ;; :output-dir "dev/out"
-                        ;; :source-map "dev/om-grid.js.map"
-                        :output-to "resources/public/js/out/om-grid.js"
+             :compiler {:output-to "resources/public/js/out/om-grid.js"
                         :output-dir "resources/public/js/out"
                         :source-map "resources/public/js/om-grid.js.map"
-                        :optimizations :none}}
-            {:id "a"
-             :source-paths ["src" "example/src"]
-             :compiler {:preamble ["react/react.min.js"]
-                        :output-to "example/om-grid.js"
-                        :output-dir "example/out"
-                        :source-map "example/om-grid.js.map"
-                        :optimizations :whitespace}}]}
+                        :optimizations :none}}]}
   )
