@@ -1,0 +1,12 @@
+.grid-titlebar {
+  border:solid 4px #A0A0A0;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  background-color: #A0A0A0;
+  font-size: 17px;
+  font-weight: bold;
+  /* color: #5F5F5F; */
+}
+

@@ -1,18 +1,22 @@
 # om-grid
 
-A Clojure library designed to ... well, that part is up to you.
+A Clojurescript component library for creating grid-like
+spreadsheets/tables.
 
 ## Usage
 
 FIXME
 ## REPL
 
-:Console
-:Piggieback (pgrid.repl/browser-repl-env):
+## Dev
+`lein figwheel dev`
+in vim, `:Console`
+in browser, go to http://localhost:3449/index.html
+in vim, `:Piggieback 9000`
 
 ## License
 
-Copyright © 2014 FIXME
+Copyright © 2014 Greg Berenfield
 
 Distributed under the Eclipse Public License either version 1.0 or (at
 your option) any later version.
