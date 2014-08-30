@@ -1,7 +1,6 @@
 # om-grid
 
-A Clojurescript component library for creating grid-like
-spreadsheets/tables.
+A Clojurescript Om component library for creating interactive grids/spreadsheets/tables.
 
 ## Usage
 
