@@ -12,10 +12,7 @@
   :profiles
   {:dev {:source-paths ["src" "dev"]
          :dependencies [[com.cemerick/piggieback "0.1.3"]
-                        [weasel "0.4.0-SNAPSHOT"]
                         [figwheel "0.1.4-SNAPSHOT"]]
-         ;; :clean-res "resources/public/js/out"
-         ;; :clean-targets *{:protect false} [:target-path :clean-res "out"]
          :clean-targets ^{:protect false} ["out" "resources/public/js/out"]
          :repl-options {:nrepl-middleware [cemerick.piggieback/wrap-cljs-repl]}
          :plugins [[com.cemerick/austin "0.1.5"]
