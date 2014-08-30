@@ -1,9 +1,9 @@
 (ns om-grid.core
   (:require [om.core :as om :include-macros true]
-            [om.dom :as dom :include-macros true]))
+            [om.dom :as dom :include-macros true]
+            [om-grid.utils :refer [olog]]))
 
 (defn grid-row-header [cursor owner]
-  ;; (olog cursor)
   (om/component
     (dom/th nil
       (dom/div #js {:className "grid-column-header-label"} (:label cursor))
@@ -15,11 +15,8 @@
   (om/component (dom/td nil r)))
 
 (defn grid-rows [row owner]
-  ;; sorting row here...
-  ;; (let [sorted-row (map #(get row %) (:column-order @my-testdev-grid))]
-  (let [sorted-row row]
-    (om/component
-      (apply dom/tr nil (om/build-all grid-col sorted-row)))))
+  (om/component
+    (apply dom/tr nil (om/build-all grid-col row))))
 
 (defn om-grid [app owner]
   (reify
@@ -32,4 +29,5 @@
                             (apply dom/tr #js {:className "om-grid-thead-tr"}
                                    (om/build-all grid-row-header (vec (sort-by #(:order %) (:columns app))))))
                  (apply dom/tbody #js {:className "om-grid-table-body"}
-                        (om/build-all grid-rows (:data app))))))))
+                        (om/build-all grid-rows (:data app)
+                                      {:fn (fn [r] (map #(get r %) (:column-order app)))})))))))
