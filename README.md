@@ -14,9 +14,9 @@ FIXME
 ## Dev
 
 1. `lein figwheel dev`
-2. in vim, `:Console`
-3. in browser, go to `http://localhost:3449/index.html`
-4. in vim, `:Piggieback 9000`
+2. vim `:Console`
+3. browse to `http://localhost:3449/index.html`
+4. vim `:Piggieback 9000`
 
 ## License
 
