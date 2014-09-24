@@ -18,6 +18,10 @@ FIXME
 3. browse to `http://localhost:3449/index.html`
 4. vim `:Piggieback 9000`
 
+## Devnotes
+For resizable columns:
+see http://bz.var.ru/comp/web/resizable.html
+
 ## License
 
 Copyright © 2014 Greg Berenfield
